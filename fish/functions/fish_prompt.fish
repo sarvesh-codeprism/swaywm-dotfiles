@@ -1,0 +1,1 @@
+/home/sarvesh/.local/share/omf/themes/harleen/fish_prompt.fish
