@@ -33,17 +33,18 @@ Plug 'BurntSushi/ripgrep'
 
 Plug 'ayu-theme/ayu-vim'
 Plug 'joshdick/onedark.vim'
-set termguicolors     " enable true colors support
+" set termguicolors     " enable true colors support
 let ayucolor="dark"   " for dark version of theme
 
 Plug 'wojciechkepka/vim-github-dark'
 Plug 'andweeb/presence.nvim'
 Plug 'karb94/neoscroll.nvim'
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'vim-latex/vim-latex'
 call plug#end()
 
 " Required:
@@ -94,4 +95,4 @@ set relativenumber
 set splitright splitbelow
 
 syntax on
-colorscheme onedark
+colorscheme ayu

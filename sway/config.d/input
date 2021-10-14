@@ -4,25 +4,11 @@
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Put your touchpad's ID to replace "Touchpad-ID" (keep the quotation marks)
 
-#input type:touchpad {
-#      dwt enabled
-#      tap enabled
-#      natural_scroll enabled
-#}
-
-### Input configuration
-#
-# Example configuration:
-#
-input "1267:12614:DELL09E8:00_04F3:3146_Touchpad" {
-    dwt enabled
-    tap enabled
-    natural_scroll enabled
-    middle_emulation enabled
+input type:touchpad {
+      dwt enabled
+      tap enabled
+      natural_scroll enabled
 }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
 
 # Read `man 5 sway-input` for more information about this section.
 #

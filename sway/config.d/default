@@ -7,6 +7,8 @@ set $down j
 set $up k
 set $right l
 
+# exec swaymsg -- output eDP-1 mode --custom 1600x900
+
 # Your preferred terminal emulators
 set $term-float alacritty
 
@@ -223,4 +225,22 @@ bindsym --whole-window --border $mod+shift+button5 resize grow width 5 px or 5 p
 #
 # Keybindings List
 #
-   bindsym $mod+t exec xed ~/.config/sway/cheatsheet    
+bindsym $mod+t exec xed ~/.config/sway/cheatsheet    
+
+bindsym $mod+n exec killall -SIGUSR1 waybarbindsym $mod+n exec killall -SIGUSR1 waybar
+
+# set $opacity 0.95
+# for_window [class="^Firefox$"] opacity $opacity
+# for_window [app_id=".*"] opacity $opacity
+
+
+# for_window [class="^Code$"] opacity 0.8
+# for_window [app_id=".*"] opacity $opacity
+
+
+# for_window [class="^lightcord$"] opacity $opacity
+# for_window [app_id=".*"] opacity $opacity
+
+
+# for_window [class=""] opacity $opacity
+# for_window [app_id=".*"] opacity $opacity

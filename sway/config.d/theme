@@ -13,26 +13,86 @@ font pango:Noto Sans Regular 0
 
 # Thin borders:
 smart_borders on
-smart_gaps on
+# smart_gaps on
 
 # Set wallpaper:
-exec swaybg -i /usr/share/endeavouros/backgrounds/eos_wallpapers_community/Endy_vector_satelliet.png
+exec swaybg -i /usr/share/endeavouros/backgrounds/eos_wallpapers_community/unsplash-modded.jpg
+
+# exec mpvpaper -o "no-audio --loop-playlist shuffle" eDP-1 Pictures/wall.mp4
+
 # Title format for windows
 for_window [shell="xdg_shell"] title_format "%title (%app_id)"
 for_window [shell="x_wayland"] title_format "%class - %title"
 
 # class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
-client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.focused          #abb2bf #abb2bf #F8F8F2 #abb2bf   #abb2bf
+client.focused_inactive #2e3440 #2e3440 #F8F8F2 #2e3440   #2e3440
+client.unfocused        #2e3440 #2e3440 #BFBFBF #2e3440   #2e3440
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 client.background       #F8F8F2
 
-#
+
+# Window color settings
+# class                 border  backgr. text    indicator
+# client.focused          #98c379 #98c379 #ffffff #98c379
+# client.unfocused        #2e3440 #2e3440 #888888 #2e3440
+# client.focused_inactive #2e3440 #2e3440 #888888 #2e3440
+# client.placeholder      #2e3440 #2e3440 #888888 #2e3440
+# client.urgent           #900000 #900000 #ffffff #900000
+# 
+# client.background       #242424
+
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
+set $base00 #101218
+set $base01 #1f222d
+set $base02 #252936
+set $base03 #5e81ac  
+set $base04 #C0C5CE
+set $base05 #d1d4e0
+set $base06 #C9CCDB
+set $base07 #ffffff
+set $base08 #ee829f
+set $base09 #f99170
+set $base0A #ffefcc
+set $base0B #a5ffe1
+set $base0C #97e0ff
+set $base0D #97bbf7
+set $base0E #c0b7f9
+set $base0F #fcc09e
+#its neon blue #4666FF
+
+# bar {
+# height 18
+# position top 
+# tray_padding 0
+# font pango:Source Code Pro Black 10
+# status_command i3status-rs
+# 
+#     colors {
+#             separator  $base01
+#             background $base01
+#             statusline $base01
+#               
+#             #                   border  background text
+#             focused_workspace  $base01 #98c379    #1f222d 
+#             active_workspace   $base01 $base02    $base03
+#             inactive_workspace $base01 $base01    #98c379
+#             urgent_workspace   $base01 $base01    $base08
+#             binding_mode       $base01 #81a1c1    #2e3440
+#     }
+# }
 bar {
    swaybar_command waybar
 }
+
+#####################################################################################################################
+#################                          bar toggle                                               #################
+#####################################################################################################################
+
+# bar toggle, hide or show
+bindsym $mod+Shift+b bar mode toggle
+
+bindsym $mod+i bar mode invisible
