@@ -29,7 +29,7 @@
 /* COLORS */
 
 /* Nord */
-@define-color bg #2E3440;
+@define-color bg #1f222d;
 /*@define-color bg #353C4A;*/
 @define-color light #D8DEE9;
 /*@define-color dark @nord_dark_font;*/
@@ -69,7 +69,7 @@
 #waybar {
     background: @bg;
     color: @light;
-    font-family: "Cantarell", "Font Awesome 5 Pro";
+    font-family: "Cascadia Code", "Cantarell", "Font Awesome 5 Pro";
     font-size: 12px;
     font-weight: bold;
 }
@@ -256,15 +256,12 @@
     background: @layout;
 }
 
-#battery {
-    background: @battery;
-}
 
 #backlight {
     background: @backlight;
 }
 
-#clock {
+#clock, #battery {
     background: @nord_bg_blue;
     color: #D8DEE9;
 }

@@ -1,16 +1,16 @@
 {
-    "layer": "top", // Waybar at top layer
+    "layer": "bottom", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     // "height": 36, // Waybar height (to be removed for auto height)
     // Archived modules
     // "custom/gpu", "bluetooth",  "custom/weather", "temperature", "sway/window"
     // Choose the order of the modules
-    "modules-left": [ "sway/workspaces"],
-    "modules-center": [ ],
-    "modules-right": [ "idle_inhibitor", "pulseaudio", "clock", "tray"],
+    "modules-left": ["idle_inhibitor", "tray"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["battery", "clock"],
     // Modules configuration
     "sway/workspaces": {
-        "disable-scroll": true,
+        "disable-scroll": false,
         "all-outputs": true,
         "format": "{icon}",
         "format-icons": {
@@ -30,6 +30,17 @@
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+    "battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
     },
     "sway/window": {
         "format": "{}",
@@ -64,7 +75,7 @@
         "spacing": 5
     },
     "clock": {
-        "format": "  {:%H:%M    %e %b}",
+        "format": " {:%H:%M   %b %e, %a}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "today-format": "<b>{}</b>",
         "on-click": "gnome-calendar"
